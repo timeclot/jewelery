@@ -1,0 +1,61 @@
+.page404 {
+  --title-c: #c79a70;
+  --link-c: rgba(255, 255, 255, 0.75);
+  --h-link-c: rgba(255, 255, 255, 1);
+
+  background-image: url("../img/purple-bg.jpg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 275px, cover;
+  background-attachment: scroll;
+}
+
+.page404__container {
+  min-height: 600px;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 140px;
+    min-height: 300px;
+  }
+}
+
+.page404__title {
+  font-family: var(--serif-font);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.33;
+  text-align: center;
+  color: var(--title-c);
+  margin-bottom: 100px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 36px * 0.8;
+  }
+  b {
+    font-weight: 400;
+    font-size: 4em;
+    line-height: 0.4;
+  }
+}
+
+.page404__link {
+  font-family: var(--sans-serif-font);
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--link-c);
+  &:hover,
+  &:focus {
+    color: var(--h-link-c);
+    transition: 0.2s;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 18px * 0.8;
+  }
+}

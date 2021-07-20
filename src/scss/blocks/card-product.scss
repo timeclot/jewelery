@@ -1,0 +1,115 @@
+.card-product {
+  --card-product-bxsh: rgba(199, 154, 112, 0.25);
+  --title-c: #c79a70;
+  --title-bg: rgba(55, 28, 77, 0.5);
+  --wrapper-bg: rgba(55, 28, 77, 0.5);
+  --picture-before-bg: rgba(39, 39, 39, 0.5);
+  --text-scrollbar-thumb-c: #c79a70;
+  --text-scrollbar-track-c: rgba(55, 28, 77, 0.5);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+
+  box-shadow: 0 6px 15px var(--card-product-bxsh);
+}
+
+.card-product__picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+  margin: 0;
+  padding: 0;
+  &::before {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    background-color: var(--picture-before-bg);
+  }
+}
+
+.card-product__picture img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.card-product__title {
+  position: relative;
+
+  margin: 0;
+  padding: 15px 10px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: var(--sans-serif-font);
+  text-align: center;
+  color: var(--title-c);
+
+  background-color: var(--title-bg);
+}
+
+.card-product__wrapper {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-height: 0;
+  margin: 0;
+  padding: 0 10px;
+  overflow: hidden;
+
+  background-color: var(--wrapper-bg);
+
+  transition: 0.8s;
+}
+
+.card-product:hover .card-product__wrapper {
+  flex-grow: 1;
+  height: auto;
+  max-height: 600px;
+}
+
+.card-product__text {
+  flex-shrink: 0;
+  position: relative;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--sans-serif-font);
+  text-align: left;
+  height: 180px;
+  @include scrollbar(
+    var(--text-scrollbar-thumb-c),
+    var(--text-scrollbar-track-c),
+    thin,
+    5px,
+    5px
+  );
+}
+
+.card-product__link {
+  display: block;
+  margin-top: auto;
+  margin-bottom: 60px;
+  padding-right: 45px;
+  padding-left: 45px;
+}

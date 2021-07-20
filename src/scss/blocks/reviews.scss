@@ -1,0 +1,43 @@
+.reviews {
+  background-image: url("../img/large-purple-bg.jpg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+  }
+}
+
+.reviews__container {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  align-items: start;
+  column-gap: 40px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+.reviews__title {
+  margin-top: 0;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #C6996F;
+  font-family: var(--serif-font);
+  font-weight: 400;
+  grid-column: 1/-1;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 36px * 0.8;
+  }
+}
+
+.reviews__writeus {
+  padding: 30px 70/655*100%;
+}
+  

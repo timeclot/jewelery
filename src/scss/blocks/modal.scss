@@ -1,0 +1,95 @@
+.modal {
+  display: flex;
+  position: fixed;
+  min-height: 100vh;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  overflow-y: auto;
+  max-height: 100%;
+  z-index: 2;
+  position: relative;
+  padding: 0;
+
+  --scrollbar-thumb-c: #c79a70;
+  --scrollbar-track-c: rgba(55, 28, 77, 0.5);
+  @include scrollbar(
+    var(--scrollbar-thumb-c),
+    var(--scrollbar-track-c),
+    thin,
+    10px,
+    10px
+  );
+  
+}
+
+.modal__overlay {
+  background-color: rgba(6, 8, 8, 0.5);
+  z-index: 1;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.modal__close {
+  z-index: 20;
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: stretch;
+  opacity: 0.5;
+
+  &::before {
+    content: "";
+    width: 20px;
+    background-size: contain;
+  }
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.modal__picture {
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+  display: block;
+  width: 768px;
+  height: auto;
+  animation: to-appearance 0.5s;
+  filter: drop-shadow(0px 10px 60px rgba(55, 28, 77, 0.25));
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.modal__message {
+  margin: 0;
+  padding: 40px;
+  padding-top: 55px;
+  max-width: 512px;
+  font-size: 1.5em;
+  line-height: 1.2;
+  filter: drop-shadow(0px 10px 60px rgba(55, 28, 77, 0.25));
+  background-color: rgba(0, 0, 0, 0.75);
+}

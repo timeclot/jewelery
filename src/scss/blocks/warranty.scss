@@ -1,0 +1,73 @@
+.warranty {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-image: url("../img/large-purple-bg.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  @media screen and (max-width: 1024px) {
+    background-image: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.warranty__title {
+  margin-top: 0;
+  font-family: var(--serif-font);
+  grid-column: 1/-1;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #C6996F;
+  font-weight: 400;
+  @media screen and (max-width: 1024px) {
+    font-size: 36px * 0.8;
+  }
+}
+
+.warranty__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.warranty__item {
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 38px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+  span {
+    font-size: 18px;
+    color: #C6996F;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+
+    margin-right: 1em;
+    margin-left: -38px;
+    width: 1em;
+    height: 1em;
+    vertical-align: baseline;
+    background-image: url("../img/icon-triangle.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px * 0.8;
+    span {
+      font-size: 18px * 0.8;
+    }
+  }
+}
+
+.warranty__footer {
+  font-size: 16px;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px * 0.8;
+  }
+}

@@ -1,0 +1,153 @@
+.roulette {
+  --roulette-scrollbar-thumb-c: #c79a70;
+  --roulette-scrollbar-track-c: rgba(55, 28, 77, 0.5);
+  --item-before-bd: #c79a70;
+
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    overflow-x: scroll;
+
+    @include scrollbar(
+      var(--roulette-scrollbar-thumb-c),
+      var(--roulette-scrollbar-track-c),
+      thin,
+      10px,
+      10px
+    );
+  }
+}
+
+.roulette__list {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  margin: 0;
+  padding-left: 0;
+
+  @media screen and (max-width: 1024px) {
+    min-height: inherit;
+  }
+}
+
+.roulette__item {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+
+  width: 22%;
+  height: 200px;
+
+  opacity: 0.5;
+
+  transition: transform 0.5s, opacity 0.6s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    z-index: 3;
+
+    display: block;
+
+    border: 2px solid var(--item-before-bd);
+    opacity: 0;
+
+    transition: opacity 2s, 0.3s;
+  }
+
+  &:nth-child(1)::before,
+  &:nth-child(4)::before {
+    top: 8%;
+    right: 8%;
+    bottom: -8%;
+    left: 5%;
+  }
+
+  &:nth-child(2)::before,
+  &:nth-child(5)::before {
+    top: -8%;
+    right: -5%;
+    bottom: 8%;
+    left: -5%;
+  }
+
+  &_active {
+    z-index: 2;
+
+    opacity: 1;
+  }
+
+  &_active::before {
+    opacity: 1;
+  }
+
+  &_active:hover::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
+}
+
+.roulette__next {
+  position: absolute;
+  top: 30%;
+  right: 8%;
+  z-index: 10;
+}
+
+.roulette__prev {
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  z-index: 10;
+
+  transform: rotate(180deg);
+}
+
+.roulette_static .roulette__list {
+  display: grid;
+
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.roulette_static .roulette__item {
+  position: static;
+  left: 0;
+
+  width: auto;
+
+  opacity: 1;
+
+  @media screen and (max-width: 1024px) {
+    width: 300px;
+    scroll-snap-align: center;
+  }
+}
+
+.roulette_static .roulette__item::before {
+  display: none;
+}
+
+.roulette_static .roulette__prev,
+.roulette_static .roulette__next {
+  display: none;
+}

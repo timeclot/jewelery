@@ -1,0 +1,29 @@
+.page-pagin {
+  --item-c: rgba(255, 255, 255, 0.75);
+  --h-item-c: #ffffff;
+}
+
+.page-pagin__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-pagin__item {
+  font-family: var(--sans-serif-font);
+  font-size: 18px;
+  line-height: 1.2;
+
+  color: var(--item-c);
+  &:first-child::before {
+    content: "← ";
+  }
+  &:hover,
+  &:focus {
+    color: var(--h-item-c);
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 18px * 0.8;
+  }
+}

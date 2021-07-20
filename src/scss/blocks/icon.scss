@@ -1,0 +1,145 @@
+.icon::before {
+  content: "";
+
+  display: inline-block;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon_box::before {
+  background-image: url("../img/icon-box.png");
+}
+
+.icon_questionnaire::before {
+  background-image: url("../img/icon-questionnaire.png");
+}
+
+.icon_manager::before {
+  background-image: url("../img/icon-manager.png");
+}
+
+.icon_money::before {
+  background-image: url("../img/icon-money.png");
+}
+
+.icon_timer::before {
+  background-image: url("../img/icon-timer.png");
+}
+
+.icon_workshop::before {
+  background-image: url("../img/icon-workshop.png");
+}
+
+.icon_pricelist::before {
+  background-image: url("../img/icon-pricelist.png");
+}
+
+.icon_gears::before {
+  background-image: url("../img/icon-gears.png");
+}
+
+.icon_search::before {
+  background-image: url("../img/icon-search.png");
+}
+
+.icon_basket::before {
+  background-image: url("../img/icon-basket.png");
+}
+
+.icon_gold::before {
+  background-image: url("../img/icon-gold.png");
+}
+
+.icon_award::before {
+  background-image: url("../img/icon-award.png");
+}
+
+.icon_guarantee::before {
+  background-image: url("../img/icon-guarantee.png");
+}
+
+.icon_shield::before {
+  background-image: url("../img/icon-shield.png");
+}
+
+.icon_calendar::before {
+  background-image: url("../img/icon-calendar.png");
+}
+
+.icon_libra::before {
+  background-image: url("../img/icon-libra.png");
+}
+
+.icon_check::before {
+  background-image: url("../img/icon-check.svg");
+}
+
+.icon_paper-clip::before {
+  background-image: url("../img/icon-paper-clip.png");
+}
+
+.icon_close::before {
+  background-image: url("../img/icon-plus.svg");
+  transform: rotate(45deg);
+}
+
+.icon_hamburger::before {
+  background-image: url("../img/icon-hamburger.svg");
+}
+
+.icon_arrow-down::before {
+  background-image: url("../img/icon-small-arrow.svg");
+}
+
+.icon_arrow-up::before {
+  background-image: url("../img/icon-small-arrow.svg");
+  transform: rotate(180deg);
+}
+
+.icon_arrow-right::before {
+  background-image: url("../img/icon-small-arrow.svg");
+  transform: rotate(-90deg);
+}
+
+.icon_arrow-left::before {
+  background-image: url("../img/icon-small-arrow.svg");
+  transform: rotate(90deg);
+}
+
+.icon_fill-arrow::before {
+  background-image: url("../img/icon-fill-arrow.svg");
+}
+
+.icon_fill-arrow::before {
+  background-image: url("../img/icon-fill-arrow.svg");
+}
+
+.icon_instagram::before {
+  background-image: url("../img/icon-instagram.svg");
+}
+
+.icon_vk::before {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.icon_youtube::before {
+  background-image: url("../img/icon-youtube.svg");
+}
+
+.icon_email::before {
+  background-image: url("../img/icon-gold-email.png");
+}
+
+.icon_location::before {
+  background-image: url("../img/icon-gold-location.png");
+}
+
+.icon_telephone::before {
+  background-image: url("../img/icon-gold-telephone.png");
+}
+
+.icon_timetable::before {
+  background-image: url("../img/icon-gold-timetable.png");
+}

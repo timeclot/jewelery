@@ -1,0 +1,39 @@
+.basket {
+  background-image: url("../img/purple-bg.jpg");
+  background-repeat: repeat-x;
+  background-position: center top 40%;
+  background-size: auto 350px;
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
+}
+
+.basket__goods {
+  overflow-x: auto;
+  
+  @include scrollbar(#c79a70, rgba(#371c4d, 0.5), thin, 10px, 10px);
+
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 20px;
+  }
+}
+
+.basket__links {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 40px;
+
+  > * {
+    margin: 0 25px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    > * {
+      margin-bottom: 25px;
+    }
+  }
+}

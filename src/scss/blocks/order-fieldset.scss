@@ -1,0 +1,48 @@
+.order-fieldset {
+  padding-bottom: 25px;
+}
+.order-fieldset__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  color: #C6996F;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px * 0.8;
+  }
+}
+
+.order-fieldset__field {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  text-align: left;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  @media screen and (max-width: 1024px) {
+    font-size: 16px * 0.8;
+  }
+}
+
+
+.order-fieldset__checkbox {
+  grid-column: 1/2;
+}
+
+.order-fieldset__text {
+  grid-column: 2/3;
+}
+
+.order-fieldset__price {
+  grid-column: 3/4;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.order-fieldset__desc {
+  grid-column: 2/3;
+  font-size: 12px;
+}

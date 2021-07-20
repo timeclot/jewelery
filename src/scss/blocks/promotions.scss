@@ -1,0 +1,18 @@
+.promotions {
+  background-image: url("../img/half-chains-bg.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center bottom;
+
+  @media screen and (max-width: 1024px) {
+    background: none;
+  }
+}
+
+.promotions__slider {
+  padding: 0;
+}
+
+.promotions__slider-wrapper {
+  padding: 0;
+}

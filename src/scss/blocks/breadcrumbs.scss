@@ -1,0 +1,28 @@
+.breadcrumbs {
+  --link-c: rgba(255, 255, 255, 0.75);
+  --h-link-c: rgba(255, 255, 255, 1);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.breadcrumbs__link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--link-c);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--h-link-c);
+  }
+  
+  &:not(:last-child)::after {
+    content: "/";
+  }
+
+  &:last-child {
+    pointer-events: none;
+  }
+
+}

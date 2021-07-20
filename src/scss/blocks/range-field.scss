@@ -1,0 +1,21 @@
+.range-field {
+  display: flex;
+}
+
+.range-field__item {
+  max-width: 90px;
+  &:first-child {
+    margin-right: auto;
+  }
+  &:last-child {
+    margin-left: 10px;
+  }
+}
+
+.range-field__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  text-align: right;
+  color: #000000;
+}

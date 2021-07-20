@@ -1,0 +1,65 @@
+.contacts {
+  background-image: url("../img/large-purple-bg.jpg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 480px;
+  background-attachment: fixeds;
+  @media screen and (max-width: 1024px) {
+    background-image: none;
+  }
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-areas: "info writeus"
+                       "socials writeus"
+                       "map  map";
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  max-width: 1250px;
+  column-gap: 30px;
+  row-gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+    max-width: 490px;
+  }
+}
+
+.contacts__info {
+  grid-area: info;
+  max-width: 520px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.contacts__social {
+  grid-area: socials;
+  padding-bottom: 25px;
+}
+
+.contacts__writeus {
+  grid-area: writeus;
+  padding: 30px 70/650*100%;
+  max-width: 650px;
+}
+
+.contacts__we-on-map {
+  grid-area: map;
+  margin-top: 50px;
+  border-radius: 10px;
+  align-self: start;
+  // padding-bottom: 30px;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 430px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 20px rgba(55, 28, 77, 0.5);
+  background-image: url("../img/contacts-map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.85);
+}

@@ -1,0 +1,142 @@
+.price {
+  list-style: none;
+  padding-bottom: 25px;
+  &[open] {
+    padding-bottom: 40px;
+  }
+}
+
+.price__title {
+  display: block;
+  list-style: none;
+  outline: none;
+
+  font-family: var(--sans-serif-font);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+
+  color: #C79A70;
+  
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+  &:hover,
+  &:focus {
+    border-color: #C79A70;
+  }
+  
+  [open] & {
+    border-color: #C79A70;
+    margin-bottom: 20px;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    margin-left: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: baseline;
+    background-image: url("../img/icon-triangle.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+
+  [open] &:after {
+    transform: rotate(0);
+    transform-origin: center;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px * 0.8;
+  }
+}
+
+.price__content {
+  overflow: auto;
+  @include scrollbar(#c79a70, rgba(#371c4d, 0.5), thin, 10px, 10px);
+}
+
+.price__table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(0px 4px 20px rgba(55, 28, 77, 0.25));
+  border-radius: 0 0 5px 5px;
+
+
+  thead {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding-left: 20px;
+    padding-right: 60px;
+  }
+
+  *~tbody {
+    border-top: 1px solid #C79A70;
+  }
+
+  tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  th {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    
+    color: #FFFFFF;
+    text-align: left;
+    width: 150px;
+    min-width: 150px;
+
+    &:nth-child(1) {
+      width: calc(100% - 300px);
+    }
+
+    @media screen and (max-width: 1024px) {
+
+      font-size: 18px * 0.8;
+
+      &:nth-child(1) {
+        width: 250px;
+      }
+    }
+  }
+
+  td {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media screen and (max-width: 1024px) {
+
+      font-size: 16px * 0.8;
+    }
+  }
+
+  tfoot td {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 12px;
+    line-height: 1;
+    text-align: right;
+  }
+}

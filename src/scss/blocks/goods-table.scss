@@ -1,0 +1,103 @@
+.goods-table {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 20px rgba(55, 28, 77, 0.25);
+  border-radius: 5px;
+  border-spacing: 0;
+  border: none;
+  min-width: 940px;
+}
+
+.goods-table__header {
+  padding-left: 45px;
+  padding-right: 45px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px #C6996F;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 18px;
+  
+  @media screen and (max-width: 1024px) {
+    font-size: 18px * 0.8;
+  }
+
+  & th {
+    font-weight: 300;
+    padding: 10px 20px;
+  }
+
+  & th:nth-child(1) {
+    padding-left: 45px;
+    width: 280px/1420px*100%;
+    min-width: 200px;
+  }
+
+  & th:nth-child(2) {
+    padding-left: 45px;
+    width: 630px/1420px*100%;
+  }
+
+  & th:nth-child(3) {
+    width: 320px/1420px*100%;
+  }
+
+  & th:nth-child(4) {
+    padding-right: 45px;
+  }
+}
+
+.goods-table__good {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: 1px solid #C6996F;
+  p {
+    margin-top: 0;
+  }
+  td {
+    vertical-align: top;
+    padding: 30px 20px;
+    border-bottom: 1px solid #C6996F;
+  }
+  & td:first-child {
+    padding-left: 45px;
+  }
+  & td:last-child {
+    padding-right: 45px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 16px * 0.8;
+  }
+}
+
+.goods-table__picture {
+  width: 280px/1420px*100%;
+  img {
+    border-radius: 3px;
+  }
+}
+
+.goods-table__price {
+  text-align: center;
+  span {
+    margin-top: 80px;
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    text-align: right;
+  }
+}
+
+.goods-table__footer {
+  td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: right;
+  }
+
+  td:first-child {
+    padding-right: 20%;
+    padding-left: 45px;;
+  }
+  td:last-child {
+    padding-right: 45px;
+  }
+}

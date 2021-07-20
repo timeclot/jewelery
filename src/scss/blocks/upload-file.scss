@@ -1,0 +1,38 @@
+.upload-file__input:focus + .upload-file__label {
+  color: #c79a70;
+}
+.upload-file__label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: right;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    margin-right: 10px;
+  }
+  &:hover {
+    color: #c79a70;
+  }
+}
+
+.upload-file__file-name {
+  display: block;
+  margin-right: auto;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: right;
+  color: #c79a70;
+  min-height: 1.5em;
+}

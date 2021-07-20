@@ -1,0 +1,89 @@
+.about-us {
+  background-image: url("../img/purple-bg.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto 360px;
+  @media screen and (max-width: 1024px) {
+   background-image: none;}
+}
+
+.about-us__container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.about-us__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 91/1420*100%;
+  row-gap: 20px;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 360px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+}
+.about-us__item:nth-child(even) .about-us__link span {
+  margin-top: auto;
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+  }
+}
+
+.about-us__link {
+  min-height: 190px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #8F8F8F;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--serif-font);
+  font-size: 36px;
+  line-height: 1.5;
+  color: #C6996F;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.2s;
+  text-align: center;
+  overflow: hidden;
+
+  span {
+    flex-grow: 1;
+    padding: 16px 15px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  &_delivery {
+    background-image: url("../img/about-us-delivery.png");
+  }
+
+  &_reviews {
+    background-image: url("../img/about-us-reviews.png");
+  }
+
+  &_warranty {
+    background-image: url("../img/about-us-warranty.png");
+  }
+
+  @media screen and (max-width: 1024px) {
+    min-height: 150px;
+    font-size: 36px * 0.8;
+ }
+}

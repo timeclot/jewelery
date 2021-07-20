@@ -1,0 +1,22 @@
+.to-top {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  width: 45px;
+  height: 60px;
+  background: rgba(39, 39, 39, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+
+  &_visible {
+    z-index: 300;
+    display: block;
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
+
+.to-top > svg {
+  transform: rotate(-90deg);
+}

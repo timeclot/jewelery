@@ -1,0 +1,23 @@
+import toggleMenu from './toggle-menu.js';
+import Roulette from './roulette.js';
+import lightbox from './lightbox.js';
+import slider from './slider.js';
+import toTop from './to-top.js';
+import uploadFile from './upload-file.js';
+import postForm from './post-form.js';
+import services from './services.js';
+import filterToggle from './filter-toggle.js';
+import quickview from './quickview.js';
+import quotes from './quotes.js';
+
+toggleMenu();
+new Roulette();
+lightbox();
+slider();
+toTop();
+uploadFile();
+postForm();
+services();
+filterToggle();
+quickview();
+quotes();

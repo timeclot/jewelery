@@ -1,0 +1,35 @@
+.social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.social__item {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border: 2px solid #C6996F;
+  border-radius: 1px;
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  transition: border 0.2s;
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+  }
+  &:hover,
+  &:focus {
+    border-color: #ffffff;
+  }
+
+}
